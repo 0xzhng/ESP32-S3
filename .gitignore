@@ -1,0 +1,54 @@
+# Build files
+build/
+sdkconfig
+sdkconfig.old
+
+# Dependencies and libraries
+components/*
+!components/.gitkeep
+deps/*
+!deps/.gitkeep
+!deps/libpeer/
+deps/libpeer/*
+!deps/libpeer/.gitkeep
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Mic_debug 
+INMP441/mic_debug/build/
+INMP441/mic_debug/sdkconfig
+INMP441/mic_debug/sdkconfig.old
+INMP441/mic_debug/components/*
+!INMP441/mic_debug/components/.gitkeep
+# Mic_test 
+INMP441/mic_test/build/
+INMP441/mic_test/sdkconfig
+INMP441/mic_test/sdkconfig.old
+INMP441/mic_test/components/*
+!INMP441/mic_test/components/.gitkeep
+
+!docs/
+!docs/images/
+!docs/images/*
+
+!components/esp-libopus/
+!components/esp-protocols/
+!components/peer/
+!components/srtp/
+
+components/esp-libopus/*
+!components/esp-libopus/.gitkeep
+components/esp-protocols/*
+!components/esp-protocols/.gitkeep
+components/peer/*
+!components/peer/.gitkeep
+components/srtp/*
+!components/srtp/.gitkeep
