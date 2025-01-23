@@ -168,8 +168,8 @@ idf.py monitor
 
 ### Media Handler (`media.cpp`)
 - **I2S Interfaces**:
-  - `I2S_NUM_0`: Audio Output (MAX98357A)
-  - `I2S_NUM_1`: Audio Input (INMP441)
+  - `I2S_NUM_0`: Audio Output (MAX98357A) (DAC)
+  - `I2S_NUM_1`: Audio Input (INMP441) (MIC)
 - **Audio Configuration**:
   - Sample Rate: 8kHz
   - Buffer Size: 320 samples
