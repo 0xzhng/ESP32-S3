@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![ESP32-S3 Project](docs/images/esp32s3.png)
+![ESP32-S3 Project](docs/images/esp32s3-flow.png)
 
 [![ESP-IDF](https://img.shields.io/badge/ESP--IDF-v5.0.2+-blue.svg)](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/index.html)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
