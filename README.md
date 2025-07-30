@@ -11,19 +11,19 @@
 
 </div>
 
-## 📝 Overview
+## Project
 
-This project integrates the OpenAI GPT-4o-Mini-Realtime model with the ESP32-S3 microcontroller, creating a powerful embedded voice assistant. Using WebRTC for peer-to-peer communication, it delivers:
+This project integrates OpenAI GPT-4o-Mini-Realtime model with the ESP32-S3 microcontroller, creating a powerful embedded voice assistant. Using WebRTC for peer-to-peer communication, it delivers:
 
 - **Real-time Voice Processing**: Direct integration with OpenAI API
 - **Embedded System Design**: Complete hardware-software integration
 - **Low Latency**: Eliminates traditional speech-to-text and text-to-speech delays
 - **Portable Solution**: Standalone operation with WiFi connectivity
 
-## 🛠️ Hardware Requirements
+## Hardware Stack
 
 ### Core Components
-- **ESP32-S3 Freeonove Wroom**
+- **ESP32-S3 Freeonove Wroom**  
   - 8MB PSRAM
   - 16MB Flash
 - **INMP441** MEMS Microphone
@@ -33,7 +33,7 @@ This project integrates the OpenAI GPT-4o-Mini-Realtime model with the ESP32-S3 
 ### Pin Configuration
 
 <details>
-<summary>📌 INMP441 Microphone Connections</summary>
+<summary> INMP441 Microphone Connections</summary>
 
 ```
 BCLK  → GPIO 47
@@ -46,7 +46,7 @@ L/R   → GND
 </details>
 
 <details>
-<summary>📌 MAX98357A Amplifier Connections</summary>
+<summary> MAX98357A Amplifier Connections</summary>
 
 ```
 BCLK  → GPIO 20
@@ -57,12 +57,12 @@ VIN   → 3.3V
 ```
 </details>
 
-## 💻 Software Requirements
+## Software Requirements
 
 - **ESP-IDF** v5.0.2 or higher
 - **CMake** 3.16 or higher
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Install ESP-IDF
 
@@ -88,12 +88,12 @@ cd esp-idf
 ```
 </details>
 
-### 2. Clone Project
+### 2. Clone Repo
 
 ```bash
 # Clone with submodules
-git clone --recursive https://github.com/rynn-zhng/ESP32S3-embedded-TEJ4.git
-cd ESP32S3-embedded-TEJ4
+git clone --recursive https://github.com/0xzhng/ESP32-S3
+cd ESP32-S3
 ```
 
 ### 3. Configure Project
@@ -127,7 +127,7 @@ $env:WIFI_SSID="your_wifi_name"
 $env:WIFI_PASSWORD="your_wifi_password"
 $env:OPENAI_API_KEY="your_api_key"
 
-# For permanent storage:
+# For permanent storage (Recommended for security reasons):
 [System.Environment]::SetEnvironmentVariable("WIFI_SSID", "your_wifi_name", "User")
 [System.Environment]::SetEnvironmentVariable("WIFI_PASSWORD", "your_wifi_password", "User")
 [System.Environment]::SetEnvironmentVariable("OPENAI_API_KEY", "your_api_key", "User")
@@ -144,14 +144,14 @@ idf.py build
 idf.py -p [PORT] flash monitor
 ```
 
-## 🔍 Monitoring and Debugging
+## Monitoring and Debugging
 
 ```bash
 # Monitor serial output
 idf.py monitor
 ```
 
-## 🏗️ Architecture
+## Architecture
 
 ### WiFi Module (`wifi.cpp`)
 - Station (STA) mode connectivity
@@ -178,16 +178,14 @@ idf.py monitor
   - Bitrate: 30kbps
   - Complexity: 0 (embedded-optimized)
 
-## 🔄 Communication Protocol
+## Protocol
 
 - WebRTC peer-to-peer communication
 - Reliable data channels
 - ICE protocol for NAT traversal
 - OPUS audio compression
 
-## 📜 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 
 
